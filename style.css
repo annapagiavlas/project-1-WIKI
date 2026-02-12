@@ -1,0 +1,143 @@
+ body {
+      margin: 0;
+      background-color: #ffe6f0;
+      font-family: Menlo, Consolas, "Courier New", monospace;
+      color: #1f7a3a;
+      cursor: url('images/petalsCursor.png') 16 16, auto;
+    } 
+
+    header {
+      padding: 20px;
+      border-bottom: 4px solid #ff8fcf;
+      background-color: #b6f2c2;
+    }
+
+    header h1 {
+      margin: 0 0 15px 0; 
+      color: #ff4fa3;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .cute-float {
+      color: #ff4fa3;
+      font-size: 22px;
+      display: inline-block;
+      animation: floaty 1.4s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .tabs a {
+      text-decoration: none;
+      color: #1f7a3a;
+      padding: 8px 12px;
+      border: 2px solid #1f7a3a;
+      background-color: #fff0f6;
+      font-size: 12px;
+    }
+
+    .tabs a:hover {
+      background-color: #ff8fcf;
+      color: #fff0f6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 200px max-content 1fr;
+      gap: 20px;
+      padding: 20px;
+      align-items: start;
+      justify-content: start;
+    }
+
+    aside {
+      border-right: 3px solid #1f7a3a;
+      padding-right: 10px;
+      font-size: 12px;
+    }
+
+    aside h3 {
+      color: #ff4fa3;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    aside li {
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      border: 2px solid #1f7a3a;
+      background-color: #fff0f6;
+      font-size: 11px;
+    }
+
+    aside li:hover {
+      background-color: #ff8fcf;
+      color: #fff0f6;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 120px);
+      grid-auto-rows: 120px;
+      gap: 15px;
+    }
+
+    .box {
+      border: 2px solid #1f7a3a;
+      background-color: #fff0f6;
+      font-size: 11px;
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .images {
+      border-left: 3px solid #1f7a3a;
+      padding-right: 10px;
+      font-size: 11px;
+
+      width: 100%
+    }
+
+    .img-box {
+      border: 2px dashed #ff4fa3;
+      padding: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      gap: 80px; 
+      padding: 20px 0px;
+      text-align: center;
+    }
+
+    .bottom div {
+      max-width: 300px;
+    }
+
+    .bottom h3 {
+      color: #ff4fa3;
+    }
+
+    .bottom p {
+      font-size: 12px;
+    }
