@@ -1,2 +1,3 @@
 Update .gitignore
 git push origin main
+.DS_Store
