@@ -40,28 +40,68 @@
       100% { transform: translateY(0); }
     }
 
-    .tabs a {
+   
+    .tabs {
+      display: flex;
+      gap: 10px;
+      position: relative;
+    }
+
+    .tabs a, .tabs .dropdown-btn {
       text-decoration: none;
       color: #1f7a3a;
       padding: 8px 12px;
       border: 2px solid #1f7a3a;
       background-color: #fff0f6;
       font-size: 12px;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
     }
-
-    .tabs a:hover {
+    .tabs a:hover, .tabs .dropdown:hover {
       background-color: #ff8fcf;
       color: #fff0f6;
     }
 
-   .layout {
-  display: grid;
-  grid-template-columns: 200px max-content 1fr;
-  gap: 20px;
-  padding: 20px;
-  align-items: start;
-  max-height: 400px;
+    .tabs .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff0f6;
+      border: 2px solid #1f7a3a;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 11px;
+      width: 300px;
+      z-index: 20;
+    }
+
+.tabs .dropdown-menu {
+  color: #1f7a3a;     
+  background-color: #fff0f6;
+  z-index: 9999;
 }
+
+    .tabs .dropdown-menu p {
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    .tabs .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .layout {
+display: grid;
+grid-template-columns: 200px max-content 1fr;
+gap: 20px;
+padding: 20px;
+align-items: start;
+max-height: 400px;
+    }
+
 
     aside {
   border-right: 3px solid #1f7a3a;
@@ -194,14 +234,14 @@ main {
       display: none;
       position: absolute;
       top: 0;
-      left: 110%;
+      left: 105%;
       background-color: #fff0f6;
       border: 2px solid #1f7a3a;
       border-radius: 5px;
       padding: 5px 10px;
       font-size: 11px;
       list-style: none;
-      min-width: 150px;
+      min-width: 0px;
       z-index: 10;
   }
 
@@ -216,8 +256,8 @@ main {
       color: #fff0f6;
     }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
+    .dropdown.active .dropdown-content {
+      display: block; 
     }
 
   </style>
@@ -232,33 +272,173 @@ main {
       <span class="cute-float">♡</span>
     </h1>
 
-    <nav class="tabs">
-      <a href="#">Overview</a>
-      <a href="#">Builds</a>
-      <a href="#">Achievements</a>
-      <a href="#">Collections</a>
+        <nav class="tabs">
+      <a href="#" class="dropdown">
+        Overview
+        <div class="dropdown-menu">
+          <p>The 1.20 Trails & Tales update introduced the Cherry Grove biome to Minecraft, which happens to be the entire reason I created this realm. I wanted a fresh start with pink wood, yay!!!! The one color the community had begged for since 2020 (the Nether wood update)! Because of this, we made an entire pink and white mansion (also thanks to the Pale Forest update), and were inspired to create an entire pink, cottage-core, bright and saturated world. Filled with flowers fields, colored concrete, cherry blossom trees, whimsical and fun builds, accompanied by very long trips to the Nether for glowstone, froglights, and shroomlights.</p>
+        </div>
+      </a>
+      <a href="#" class="dropdown">
+      Builds
+      <div class="dropdown-menu">
+        <p>As of now we have…</p>
+        <ul>
+          <li>The pink-bow mansion base</li>
+          <li>Moon heart-home</li>
+          <li>Strawberries on a branch</li>
+          <li>Farming quad</li>
+          <li>Teddy bear</li>
+          <li>Glass cherries</li>
+          <li>Tulip waterfall</li>
+          <li>Japanese cherry tree</li>
+          <li>Strawberry shortcake house</li>
+          <li>Lemon branch</li>
+          <li>Heart pond</li>
+          <li>House Targaryen sigil</li>
+          <li>Horse stable</li>
+          <li>Fishing pier</li>
+          <li>Pink picnic</li>
+          <li>Flower field</li>
+          <li>Ghast home</li>
+          <li>Animal barn</li>
+          <li>Cat-fe</li>
+          <li>Pink lighthouse</li>
+          <li>Polly-pocket house</li>
+          <li>Cat sanctuary</li>
+        </ul>
+      </div>
+    </a>
+      <a href="#" class="dropdown">
+      Achievements
+      <div class="dropdown-menu">
+        <ul>
+          <li>Acquire Hardware ✅</li>
+          <li>Adventuring Time ❌</li>
+          <li>Alternative Fuel ✅</li>
+          <li>Artificial Selection ✅</li>
+          <li>Atlantis? ✅</li>
+          <li>Bake Bread ✅</li>
+          <li>Beam Me Up ✅</li>
+          <li>Benchmaking ✅</li>
+          <li>Body Guard ✅</li>
+          <li>Castaway ❌</li>
+          <li>Camouflage ❌</li>
+          <li>Cheating Death ✅</li>
+          <li>Chestful of Cobblestone ✅</li>
+          <li>Cow Tipper ✅</li>
+          <li>Delicious Fish ✅</li>
+          <li>DIAMONDS! ✅</li>
+          <li>Diamonds to You! ✅</li>
+          <li>Dispense With This ❌</li>
+          <li>Do a Barrel Roll! ❌</li>
+          <li>Dry Spell ✅</li>
+          <li>Echolocation ✅</li>
+          <li>Enchanter ✅</li>
+          <li>Feeling Ill ✅</li>
+          <li>Free Diver ✅</li>
+          <li>Freight Station ✅</li>
+          <li>Fruit on the Loom ❌</li>
+          <li>Getting Wood ✅</li>
+          <li>Getting an Upgrade ✅</li>
+          <li>Great View From Up Here ❌</li>
+          <li>Have a Shearful Day ✅</li>
+          <li>Hot Topic ✅</li>
+          <li>I'm a Marine Biologist ✅</li>
+          <li>Inception ❌</li>
+          <li>Into Fire ✅</li>
+          <li>Into the Nether ✅</li>
+          <li>Iron Belly ✅</li>
+          <li>Iron Man ✅</li>
+          <li>It's a Sign! ✅</li>
+          <li>Leader of the Pack ❌</li>
+          <li>Let it Go! ❌</li>
+          <li>Librarian ✅</li>
+          <li>Lion Tamer ✅</li>
+          <li>Local Brewery ✅</li>
+          <li>Map Room ❌</li>
+          <li>Me Gold! ✅</li>
+          <li>MOAR Tools ✅</li>
+          <li>Monster Hunter ✅</li>
+          <li>Moskstraumen ❌</li>
+          <li>On a Rail ✅</li>
+          <li>One Pickle, Two Pickle, Sea Pickle, Four ❌</li>
+          <li>Organizational Wizard ❌</li>
+          <li>Overkill ✅</li>
+          <li>Overpowered ❌</li>
+          <li>Passing the Time ✅</li>
+          <li>Pork Chop ✅</li>
+          <li>Pot Planter ✅</li>
+          <li>Rabbit Season ✅</li>
+          <li>Rainbow Collection ❌</li>
+          <li>Renewable Energy ✅</li>
+          <li>Repopulation ✅</li>
+          <li>Return to Sender ❌</li>
+          <li>Saddle up ✅</li>
+          <li>Sail the 7 Seas ❌</li>
+          <li>Sleep with the Fishes ❌</li>
+          <li>Smelt Everything ✅</li>
+          <li>Sniper Duel ❌</li>
+          <li>So I Got That Going for Me ❌</li>
+          <li>Stayin' Frosty ✅</li>
+          <li>Super Fuel ✅</li>
+          <li>Super Sonic ❌</li>
+          <li>Taking Inventory ✅</li>
+          <li>Taste of Your Own Medicine ❌</li>
+          <li>The Beaconator ❌</li>
+          <li>The Beginning? ❌</li>
+          <li>The Beginning ❌</li>
+          <li>The Deep End ❌</li>
+          <li>The End? ✅</li>
+          <li>The End. ✅</li>
+          <li>The End... Again... ❌</li>
+          <li>The Lie ✅</li>
+          <li>Tie Dye Outfit ✅</li>
+          <li>Time to Farm ✅</li>
+          <li>Time to Mine ✅</li>
+          <li>Time to Strike ✅</li>
+          <li>Top of the World ❌</li>
+          <li>Trampoline ✅</li>
+          <li>Treasure Hunter ❌</li>
+        </ul>
+      </div>
+    </a>
 
-    </nav>
-  </header>
+    <a href="#" class="dropdown">
+      Collections
+    </a>
+  </nav>
+</header>
 
   <section class="layout">
-    <aside>
-      <h3>Progress + Status</h3>
-      <ul>
-       <li class="dropdown">
-          Milestones
-          <ul class="dropdown-content">
-            <li>
-            Started the Realm - December 27, 2025
-          </li>
-<li>
-  The World's Seed: 1816648670920646980
-</li>
-
-        </ul>
-        <li>Combat Stats</li>
-        <li>Mining</li>
+   <aside>
+  <h3>Progress + Status</h3>
+  <ul>
+    <li class="dropdown" onclick="this.classList.toggle('active')">
+      Milestones
+      <ul class="dropdown-content">
+        <li>Started the Realm - December 27, 2025</li>
+        <li>The World's Seed: 1816648670920646980</li>
       </ul>
+    </li>
+
+    <li class="dropdown" onclick="this.classList.toggle('active')">
+      Combat Stats
+      <ul class="dropdown-content">
+        <li>Time played: 13d 18h 6m</li>
+        <li>Monsters Killed: 1844</li>
+        <li>Distance Travelled: 1,514,522</li>
+      </ul>
+    </li>
+
+    <li class="dropdown" onclick="this.classList.toggle('active')">
+      Mining
+      <ul class="dropdown-content">
+        <li>Blocks Broken: 168,756</li>
+      </ul>
+    </li>
+  </ul>
+</aside>
     </aside>
 
     <main class="grid">
@@ -295,6 +475,22 @@ main {
         Effects
       <img src="images/strawberryShortcake.PNG" alt="Effects"/>
       </div>
+ <div class="box">
+        Redstone
+      <img src="images/largeTree.jpg" alt="Redstone"/>
+ </div>
+<div class="box">
+        Nether
+      <img src="images/moon.PNG" alt="Nether"/>
+</div>
+<div class="box">
+        End
+      <img src="images/picnic.jpg" alt="End"/>  
+</div>
+<div class="box">
+        Misc
+      <img src="images/ghastHome.PNG" alt="Misc"/>  
+</div>
     </main>
 
      <div class="images">
