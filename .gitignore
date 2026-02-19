@@ -1,6 +1,8 @@
-.DS_Store
-echo ".DS_Store" >> .gitignore
-git add .gitignore
-git commit -m "Add .DS_Store to .gitignore"
-
+# Ignore .DS_Store files
+.DS_Store   
+# Ignore node_modules directory
+node_modules/
+# Ignore log files
+*.log
+    
     
