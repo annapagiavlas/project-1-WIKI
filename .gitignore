@@ -1,7 +1,2 @@
-.DS_Store
-
-
-Remove large MP4 files to allow push
-
-
-``
+Update .gitignore
+git push origin main
